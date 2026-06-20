@@ -45,5 +45,7 @@ More writing, for one thing. Components can be set to restart under certain circ
 Because it uses transient SystemD units under the hood, these (tab completed!) commands can be used:
 
 `systemctl --user restart wf-session-wayland-1-wf-panel.service` Restart the panel!
+
 `journalctl --user -xef wf-session-wayland-1-wf-background.service` Read through the log for background
+
 `journalctl --user -xefu wf-session-wayland-1-mako.service` Follow log lines being written about mako in real time
