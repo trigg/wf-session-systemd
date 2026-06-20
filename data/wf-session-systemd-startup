@@ -1,0 +1,3 @@
+#!/bin/bash
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XAUTHORITY WAYFIRE_SOCKET XDG_CURRENT_DESKTOP=wayfire
+systemctl --user start wf-session

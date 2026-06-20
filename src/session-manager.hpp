@@ -20,8 +20,6 @@ class SessionManager
     bool init(const std::string& custom_config_path);
     int run();
     void reload_configuration();
-    void update_environments(const std::vector<std::pair<std::string, std::string>>& env_pairs);
-    void harvest_env();
 
   private:
     std::string config_path;

@@ -18,7 +18,7 @@ mako=mako
 And write a new autostart
 ```
 [autostart]
-session=systemctl --user start wf-session
+session=wf-session-systemd-startup
 ```
 
 Note that if you have another wayfire-nested.ini for a nested instance you should use

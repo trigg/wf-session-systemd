@@ -17,5 +17,6 @@ metadata_dir = get_option('prefix') / get_option('datadir') / 'wf-session' / 'me
 add_project_arguments('-DMETADATA_DIR="' + metadata_dir + '"', language: 'cpp')
 
 subdir('metadata')
+subdir('data')
 subdir('data/systemd')
 subdir('src')
