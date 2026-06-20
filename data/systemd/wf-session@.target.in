@@ -1,0 +1,3 @@
+[Unit]
+Description=Wayfire Session Target For Instance %i
+StopWhenUnneeded=true

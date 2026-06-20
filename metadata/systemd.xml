@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<systemd>
+    <plugin name="systemd">
+        <option name="color_scheme" type="string">
+            <short>Global Color Scheme Mode</short>
+            <default>prefer-light</default>
+            <desc>
+                <value>Dark</value>
+                <_name>prefer-dark</_name>
+            </desc>
+            <desc>
+                <value>Light</value>
+                <_name>prefer-light</_name>
+            </desc>
+        </option>
+        <option name="gtk_theme" type="string">
+            <short>GTK Theme Name</short>
+            <default>Default</default>
+        </option>
+        <option name="icon_theme" type="string">
+            <short>Icon Theme Name</short>
+            <default>hicolor</default>
+        </option>
+        <option name="font_name" type="string">
+            <short>Default Interface Font</short>
+            <default>Sans 10</default>
+        </option>
+        <option name="overlay_scrolling" type="bool">
+            <short>Enable Overlay Scrolling</short>
+            <default>true</default>
+        </option>
+
+
+    </plugin>
+</systemd>

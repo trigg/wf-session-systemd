@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<systemd>
+    <object name="component">
+        <option name="command" type="string">
+            <short>Execution Command</short>
+            <long>The absolute command execution line, including arguments, passed to
+                systemd-run.</long>
+            <default></default>
+        </option>
+        <option name="enabled" type="bool">
+            <short>Enable Component</short>
+            <long>Toggles whether this desktop process should actively be managed and started
+                during
+                initialization.</long>
+            <default>false</default>
+        </option>
+        <option name="restart_on_crash" type="bool">
+            <short>Restart on Crash</short>
+            <long>Maps to systemd Restart=on-failure. Re-spawns the application automatically if
+                it
+                terminates abnormally.</long>
+            <default>false</default>
+        </option>
+        <option name="restart_on_graceful" type="bool">
+            <short>Restart on Graceful Exit</short>
+            <long>Maps to systemd Restart=always. Re-spawns the application even if it exited
+                cleanly with return code 0.</long>
+            <default>false</default>
+        </option>
+        <option name="fork_on_start" type="bool">
+            <short>Forks on Startup</short>
+            <long>Maps to systemd Type=forking. Required for older daemons that detach from the
+                primary process group initialization loop.</long>
+            <default>false</default>
+        </option>
+    </object>
+</systemd>

@@ -1,0 +1,14 @@
+[Unit]
+Description=Wayfire Session Manager
+BindsTo=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=@bindir@/wf-session-systemd
+Restart=on-abnormal
+RestartSec=1s
+ImportCredential=wayland.*
+
+[Install]
+WantedBy=graphical-session.target
