@@ -49,3 +49,5 @@ Because it uses transient SystemD units under the hood, these (tab completed!) c
 `journalctl --user -xef wf-session-wayland-1-wf-background.service` Read through the log for background
 
 `journalctl --user -xefu wf-session-wayland-1-mako.service` Follow log lines being written about mako in real time
+
+Also notable is that changing a component from `enabled=true` to `false` will actively stop the component running and the inverse will actively start it, unlike Wayfire's autostart which does not start newly added items until next start
