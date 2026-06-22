@@ -33,5 +33,11 @@
                 primary process group initialization loop.</long>
             <default>false</default>
         </option>
+        <option name="session_service" type="bool">
+            <short>Is a Session Service</short>
+            <long>Adds possibly required extra priviledges by starting the service in the
+                service.slice</long>
+            <default>false</default>
+        </option>
     </object>
 </systemd>

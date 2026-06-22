@@ -183,6 +183,17 @@ void ComponentManager::start(const Component& app)
         sd_bus_message_append(m, "s", ("wf-session (" + instance_id + "): " + app.get_name()).c_str());
         sd_bus_message_close_container(m);
         sd_bus_message_close_container(m);
+        /* Use the session slive */
+        if (app.is_session())
+        {
+            sd_bus_message_open_container(m, 'r', "sv");
+            sd_bus_message_append(m, "s", "Slice");
+            sd_bus_message_open_container(m, 'v', "s");
+            sd_bus_message_append(m, "s", "session.slice");
+            sd_bus_message_close_container(m);
+            sd_bus_message_close_container(m);
+        }
+
         /* The type, oneshot, simple etc. */
         sd_bus_message_open_container(m, 'r', "sv");
         sd_bus_message_append(m, "s", "Type");

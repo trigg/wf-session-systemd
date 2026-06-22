@@ -18,6 +18,7 @@ class Component
     bool should_restart_on_crash() const;
     bool should_restart_on_graceful() const;
     bool is_fork_on_start() const;
+    bool is_session() const;
 
     std::string get_unit_name() const;
     std::string get_unit_path() const;
@@ -34,6 +35,7 @@ class Component
     WfOption<bool> restart_on_graceful;
     WfOption<bool> fork_on_start;
     WfOption<bool> enabled;
+    WfOption<bool> session;
 
     std::shared_ptr<wf::config::section_t> config_section;
     wf::config::option_base_t::updated_callback_t on_enabled_changed_cb;

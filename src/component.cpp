@@ -56,6 +56,11 @@ bool Component::is_enabled() const
     return (opt_en->get_value_str() == "true" || opt_en->get_value_str() == "1");
 }
 
+bool Component::is_session() const
+{
+    return session;
+}
+
 std::string Component::get_unit_name() const
 {
     return "wf-session-" + instance_id + "-" + name + ".service";
@@ -132,6 +137,7 @@ Component::Component(std::shared_ptr<wf::config::section_t> section,
     restart_on_graceful{section->get_name() + "/restart_on_graceful"},
     fork_on_start{section->get_name() + "/fork_on_start"},
     enabled{section->get_name() + "/enabled"},
+    session(section->get_name() + "/session_service"),
     config_section(section)
 {
     enabled.set_callback([this] ()
